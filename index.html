@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Launcher</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    #content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #progress-container {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: #f3f3f3;
+      padding: 10px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+    #progress-bar {
+      width: 100%;
+      background-color: #f3f3f3;
+    }
+    #progress-bar div {
+      width: 0;
+      height: 30px;
+      background-color: #4caf50;
+      text-align: center;
+      line-height: 30px;
+      color: white;
+    }
+    #status-text {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <h1>Welcome to Minecraft Launcher</h1>
+    <label for="version-select">Select Minecraft Version:</label>
+    <select id="version-select">
+      <option value="1.16.5">1.16.5</option>
+      <option value="1.17.1">1.17.1</option>
+      <option value="1.18.2">1.18.2</option>
+      <!-- Add more versions as needed -->
+    </select>
+    <button id="launch-button" class="primary-button">Launch Minecraft</button>
+  </div>
+  <div id="progress-container">
+    <div id="progress-bar"><div></div></div>
+    <p id="status-text"></p>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
